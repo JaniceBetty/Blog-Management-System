@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for post in posts.items %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
+                    <a class="mr-2" href="{{ url_for('users.user_posts', username=post.author.username)}}">{{ post.author.username }}</a>
+                    <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small> <!--date_posted(variable) is a DateTime class's object so we can used DateTime methods: strftime can be used to display date and time in any format that you like-->
+                </div>
+                <h2><a class="article-title" href="{{ url_for('posts.post', post_id=post.id) }}">{{ post.title }}</a></h2>
+                <p class="article-content">{{ post.content }}</p>
+            </div>
+        </article>
+    {% endfor %}
+
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                {%- if posts.has_prev %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ url_for('main.home', page=posts.prev_num) }}">Previous</a>
+                    </li>
+                {%- else %}
+                    <li class="page-item disabled">
+                        <span class="page-link">Previous</span>
+                    </li>
+                {%- endif %}
+
+                {%- for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                    {% if page_num %}
+                        {% if page_num == posts.page %}
+                            <li class="page-item active"><span class="page-link">{{ page_num }}</span></li>
+                        {% else %}
+                            <li class="page-item"><a class="page-link" href="{{ url_for('main.home', page=page_num) }}">{{ page_num }}</a></li>
+                        {% endif %}
+                    {% else %}
+                        <li class="page-item disabled"><span class="page-link">…</span></li>
+                    {% endif %}
+                {%- endfor %}
+
+                {%- if posts.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="{{ url_for('main.home', page=posts.next_num) }}">Next</a>
+                    </li>
+                {%- else %}
+                    <li class="page-item disabled">
+                        <span class="page-link">Next</span>
+                    </li>
+                {%- endif %}
+            </ul>
+        </nav>
+
+
+{% endblock content %}
