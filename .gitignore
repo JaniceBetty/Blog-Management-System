@@ -5,7 +5,7 @@ __pycache__/
 
 
 # Virtual Environment
-flask_project/
+blog_venv/
 venv/
 env/
 .venv/

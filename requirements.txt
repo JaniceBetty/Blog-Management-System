@@ -9,3 +9,4 @@ python-dotenv
 Pillow
 itsdangerous
 email-validator
+gunicorn
