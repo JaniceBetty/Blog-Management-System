@@ -3,6 +3,7 @@ Flask-WTF
 WTForms
 Flask-Login
 Flask-SQLAlchemy
+psycopg2-binary
 Flask-Bcrypt
 Flask-Mail
 python-dotenv
