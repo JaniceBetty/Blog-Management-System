@@ -12,31 +12,31 @@ A production-ready, role-based blog management system built with Flask, where ad
 ### 🏠 Home Page – Blog Listing
 
 <p align="center">
-  <img src="images/home.png" width="700">
+  <img src="flask_blog/static/images/home.png" width="700">
 </p>
 
 ### 📝 User Registration
 
 <p align="center">
-  <img src="images/register.png" width="700">
+  <img src="flask_blog/static/images/register.png" width="700">
 </p>
 
 ### 🔐 User Login
 
 <p align="center">
-  <img src="images/login.png" width="700">
+  <img src="flask_blog/static/images/login.png" width="700">
 </p>
 
 ### 👤 Account Management
 
 <p align="center">
-  <img src="images/account.png" width="700">
+  <img src="flask_blog/static/images/account.png" width="700">
 </p>
 
 ### ✍️ Create Post (Admin Access)
 
 <p align="center">
-  <img src="images/create.png" width="700">
+  <img src="flask_blog/static/images/create.png" width="700">
 </p>
 
 ## 🧠 Problem Statement
