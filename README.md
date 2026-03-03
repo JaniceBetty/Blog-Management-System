@@ -111,7 +111,7 @@ The project follows a modular architecture using Flask Blueprints to ensure scal
 ## 📈 Future Improvements
 - Implement JWT-based authentication for stateless API access  
 - Refactor fully into the Flask Application Factory pattern  
-- - Enhance configuration management with environment-based settings (Development, Testing, Production)  
+- Enhance configuration management with environment-based settings (Development, Testing, Production)  
 - Introduce automated testing  
 - Containerize the application using Docker  
 
