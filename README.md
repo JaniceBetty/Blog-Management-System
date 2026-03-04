@@ -84,7 +84,7 @@ python run.py
 
 ## 📂 Project Structure
 ```text
-project-root/
+Blog-Management-System/
 │
 ├── flask_blog/
 │   ├── main/              # General routes (home, landing pages)
