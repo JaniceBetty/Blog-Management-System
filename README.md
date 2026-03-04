@@ -92,7 +92,7 @@ Blog-Management-System/
 │   ├── users/             # Authentication and profile management
 │   ├── templates/         # Jinja2 templates
 │   ├── static/            # CSS, images, uploaded files
-│   ├── __init__.py        # Application factory & Blueprint registration
+│   ├── __init__.py        # Blueprint registration
 │   ├── config.py          # Configuration classes
 │   └── models.py          # Database models
 │
